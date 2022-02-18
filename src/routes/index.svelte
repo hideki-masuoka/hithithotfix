@@ -16,6 +16,10 @@
 	});
 </script>
 
+<svelte:head>
+	<title>叩くと直るかな？ 既知を集めて未知を照らそう｜Hit Hit Hot-Fix</title>
+</svelte:head>
+
 {#if '1' === $pageID}
 
 <TopPage />
