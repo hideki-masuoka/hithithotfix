@@ -1,6 +1,6 @@
 {
   "name": "hithithotfix",
-  "version": "0.0.1",
+  "version": "0.0.2-day2",
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
