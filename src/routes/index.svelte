@@ -1,17 +1,46 @@
 <script>
 	const PageTitle = 'こんな時どうする？';
 	const PageSubTitle = '叩けば直りますか？';
+
+	let issues = [
+		{
+			issueID: '1',
+			text: 'パソコンの画面を画像ファイルにしたい',
+			userID: '1'
+		},
+		{
+			issueID: '2',
+			text: 'テレビが急に映らなくなった',
+			userID: '1'
+		},
+		{
+			issueID: '3',
+			text: '来年はチョコレートがほしいなあと思った',
+			userID: '1'
+		},
+		{
+			issueID: '4',
+			text: 'あの時あんな機能があれば良かったのになあと思った',
+			userID: '1'
+		},
+		{
+			issueID: '5',
+			text: 'ココアを美味しくお召し上がりたい',
+			userID: '1'
+		}
+
+	];
 </script>
 
 <section class="text-gray-600 body-font">
   <div class="container px-5 py-24 mx-auto flex items-center md:flex-row flex-col lg:w-4/5">
     <div class="flex flex-col md:pr-10 md:mb-0 mb-6 pr-0 w-full md:w-auto md:text-left text-center">
-      <h2 class="text-xs text-yellow-500 tracking-widest font-medium title-font mb-1">
-		  {PageSubTitle}
-	  </h2>
       <h1 class="md:text-3xl text-2xl font-medium title-font text-gray-900">
 		  {PageTitle}
 	  </h1>
+	  <h2 class="text-xs text-yellow-500 tracking-widest font-medium title-font mb-1">
+		  {PageSubTitle}
+	  </h2>
     </div>
     <div class="flex md:ml-auto md:mr-0 mx-auto items-center flex-shrink-0 space-x-4">
       <button class="bg-gray-100 inline-flex py-3 px-5 rounded-lg items-center hover:bg-gray-200 focus:outline-none">
@@ -46,63 +75,25 @@
 	  <button class="btn btn-primary btn-circle">
 		  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
 		</button>
-</div>
+	</div>
 
     <div class="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
-      <div class="p-2 sm:w-1/2 w-full">
-        <div class="bg-gray-100 rounded flex p-4 h-full items-center">
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-yellow-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
-            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
-            <path d="M22 4L12 14.01l-3-3"></path>
-          </svg>
-          <span class="title-font font-medium">Authentic Cliche Forage</span>
-        </div>
-      </div>
-      <div class="p-2 sm:w-1/2 w-full">
-        <div class="bg-gray-100 rounded flex p-4 h-full items-center">
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-yellow-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
-            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
-            <path d="M22 4L12 14.01l-3-3"></path>
-          </svg>
-          <span class="title-font font-medium">Kinfolk Chips Snackwave</span>
-        </div>
-      </div>
-      <div class="p-2 sm:w-1/2 w-full">
-        <div class="bg-gray-100 rounded flex p-4 h-full items-center">
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-yellow-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
-            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
-            <path d="M22 4L12 14.01l-3-3"></path>
-          </svg>
-          <span class="title-font font-medium">Coloring Book Ethical</span>
-        </div>
-      </div>
-      <div class="p-2 sm:w-1/2 w-full">
-        <div class="bg-gray-100 rounded flex p-4 h-full items-center">
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-yellow-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
-            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
-            <path d="M22 4L12 14.01l-3-3"></path>
-          </svg>
-          <span class="title-font font-medium">Typewriter Polaroid Cray</span>
-        </div>
-      </div>
-      <div class="p-2 sm:w-1/2 w-full">
-        <div class="bg-gray-100 rounded flex p-4 h-full items-center">
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-yellow-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
-            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
-            <path d="M22 4L12 14.01l-3-3"></path>
-          </svg>
-          <span class="title-font font-medium">Pack Truffaut Blue</span>
-        </div>
-      </div>
-      <div class="p-2 sm:w-1/2 w-full">
-        <div class="bg-gray-100 rounded flex p-4 h-full items-center">
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-yellow-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
-            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
-            <path d="M22 4L12 14.01l-3-3"></path>
-          </svg>
-          <span class="title-font font-medium">The Catcher In The Rye</span>
-        </div>
-      </div>
+
+
+	  {#each issues as item}
+	  <div class="p-2 sm:w-1/2 w-full">
+		<div class="bg-gray-100 rounded flex p-4 h-full items-center">
+		  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-yellow-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+			<path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+			<path d="M22 4L12 14.01l-3-3"></path>
+		  </svg>
+		  <span class="title-font font-medium">
+			  {item.text} 時
+		  </span>
+		</div>
+	  </div>
+	  {/each}
+
     </div>
   </div>
 </section>

@@ -83,4 +83,8 @@
 
 <style global lang="postcss">
 	@tailwind base;
+
+	body {
+		@apply bg-white;
+	}
 </style>
