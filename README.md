@@ -1,40 +1,30 @@
-# create-svelte
+# Hit Hit Hot-Fix
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+アプリケーション概要を書く
 
-## Creating a project
+## About
 
-If you're seeing this, you've probably already done this step. Congrats!
+これは 2022 年 2 月にオンラインで開催されている「第 2 回 ツクってアソぶハッカソン」で開発されたアプリケーションです。
 
-```bash
-# create a new project in the current directory
-npm init svelte@next
+[ツクってアソぶハッカソン](https://tsukuaso.com/)
 
-# create a new project in my-app
-npm init svelte@next my-app
-```
+### チーム｜ fkuMnk
 
-> Note: the `@next` is temporary
+### 進捗状況｜ハッカソン時
 
-## Developing
+#### 1 日目
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+![レッサー・デザインスプリント](https://pbs.twimg.com/media/FLzpepVacAERT4o?format=jpg&name=large)
 
-```bash
-npm run dev
+#### 2 日目
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+![レッサー・デザインスプリント](https://lh3.googleusercontent.com/ejmUZ1_oA5juwVc8UienwPD50foUat87IW0aoZwSkkJlhqTW42JqliLGk-ATLX7K-w_W93tmYxe-gkLzifV6GCHbOA5z1xQndM_Xg7uiAjZoTR2SrQi722rDpiozF-gS05JxwnfndvXF_pGoxuy2K-bVB_GBAIcevoCdPi3ZXbVhat-btX11Q4yCu2VzLHArHzUZsiaB6WZziDfhuTOV27u5bd-57W3va68AdGsb9hif8INfCv9EshBazSzJtgm0dbHWllrhl3x7us0fy4R1_d5c_-HHqKHTsO392YlUmR2ecY6yJh-8V0VN0XJeaklq1nAeyyA1YCW_SbYE6u2Kp1CnctC2537kkL7Ax_1hNgbSng2OtYbHJhdqNBxbZlIPsr-hTZNhKKfhvN95XLasmk8qT133V0oa7LhH59CSHuMuOfUn8cEFXrhYSRqFJzQG4GWlhkbGOfVMdwniaBgt0KKEVimNx28C7qfdTmDWDMSbtE_rmf889dgHf4TQpqJXS_OGxsnbt9-kXMRcMsQIz429vx6yuKKcyK_AV01zG94hSXcH9_rcdCpfKPRA-qE7syNsl8-6EhbzOJxrvt_YBNGeAJhtEYg8fGI1M7WDA-KPo-tH7cB5uV48k2b3LADPqfaeRYYkCBoWQe4TExXTZXZE0QgmG6s3jVHzuoBmXStIZbcEaK3OTfPnuXH4BYYLbsWYEbHWBs_uIixQ_9qfH8WyTA=w632-h678-no?authuser=0)
 
-## Building
+ソリューションスケッチ、クレイジー 8
+![ソリューションスケッチ、クレイジー8](https://lh3.googleusercontent.com/hj76XRrluuRJkbYamgluOwbb3AFFpIZnBNvtHjZzLGcYPAY2H4TacPF2VdI1_Kf5dnB7XP5G1NwEHp21Sw9DcsI-2Cqq5n3Hh2QV7n5I4e3-W7gS5MRpMzdp3sUJoeH5hfSoyQSRIvbq8JIZTR3yusZYsE6BJ7y2rDxn-T6WEEzn6A1SMggJBYBGmNDoWrThSOQYsnF5vyk5EhZu7_WFRyTKm9yMOvBCcyD15Qi2uOtU21iKP1FVNf-Huyll3KTUd9A9OdrHJbu0yh_ZvvrxTtPJgeahOdc4w7bltkb2hj4y4PAOzoqfYZKUYj6CI53I6KKXcoZssIY-D7SF1n_0PEJzWhilO2ZMkP__iCy_BmOXyqnpctASqZeQduk1xBy4vGscIh_mzfi4FQ9yUNIGtaYHQgaz36g8UQCeSzrFhFWqWrE8D9Qx86xSycWDbGVysEuS584O8eMLeNMkgudWE-cw2shKdcee9O7_i65c4i3Ww77jRY9zCnPsnusOCrTM0yQ-QcBaP60_LE3tkCr_EA_YGnNSKTbiuPLvRWOWiStSP-XSyBBF_g1sRCqVg5e9IrFBF4KtTsj-k_dkvrpZgVGB8r5E3BDaUYL2ZmaQT1EvLyD0aoNWadYxIm33ctiQ5KXu1lyKJyeQs8sO226QKGsbCyimxZl9M5IFmqgt1rehtnTsYfVMDSXTAfZabn85l8Pzl5KIMQUaQRt-vgyUJakL1g=w920-h654-no?authuser=0)
 
-To create a production version of your app:
+ストーリーボード ![ストーリーボード](https://lh3.googleusercontent.com/q_OkVyeqaBcg7Vj4Ty_IgSKButy0tRhzuovQxRXm2OjT_k99YnStUtC4xws6iYtnQWLHMVWzFKlYxLjW2bcfRxzvScwkFBF9GpoFjWrjN8c1rf8gJ4NW70kHFDdMzOVkjm4uzh2QK_p_dGVG1KeNQCG2LPtsP5IJcUnd3c11jxsjR1vTLLXdNq7Y8RsCJFLXwlSdCzZoAtMnlQcAdqR6bdpTAyDIeV_3obKxMoLWwsl06nkaEz90j9ssi0LvyIYieFlJo1bbipZds9IF65WUhjkzlMhUv88-wP_rIqhKVRwiIPlcGMGCXl4A5HrSYcbffL6qGc1c4grZn2pDTD5f6GbN9Er0pSUbhp_XkxAif_jKFGsvonJGaFhjHfaFI2Hmeee2XY10SAyGkNwWys9wfLwGiybqSZXbdj-hjEsT9mmWtvgXiuzfk-MKiqE-hqg77bRALE-T8Y9DbtzwkftS690t804sOy7Y3cGpF0Sn9O37GJp9VebWVWAKh9QpRZSfSdK8YZg1sIRh2maPlV_IsWXPYgloCdoIm3JwFo-23UpfT7DrfWgL52lIuzOU0FAKwUl06hcrfIUInLg_mTbWJ2cZq3AwiW-aSUWbDz_ADbf6WBc-6OzKZG84hRRiUMrL7Q04qEe7XrBX9ny7f0W-AqngUbJPqtQPhTXmxdNUQ6jtsuGyOS2wnI8AdjjgrVisWPYq4iXgJM6H4CI5jreXosUP8A=w920-h661-no?authuser=0)
 
-```bash
-npm run build
-```
+#### 最終日
 
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+Soon
