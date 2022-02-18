@@ -1,35 +1,16 @@
 <script>
+	import { onMount } from 'svelte';
+	import { issues } from '$lib/store.js';
+	import { getIssues } from '$lib/dummy-data.js';
+
 	const PageTitle = 'こんな時どうする？';
 	const PageSubTitle = '叩けば直りますか？';
 
-	let issues = [
-		{
-			issueID: '1',
-			text: 'パソコンの画面を画像ファイルにしたい',
-			userID: '1'
-		},
-		{
-			issueID: '2',
-			text: 'テレビが急に映らなくなった',
-			userID: '1'
-		},
-		{
-			issueID: '3',
-			text: '来年はチョコレートがほしいなあと思った',
-			userID: '1'
-		},
-		{
-			issueID: '4',
-			text: 'あの時あんな機能があれば良かったのになあと思った',
-			userID: '1'
-		},
-		{
-			issueID: '5',
-			text: 'ココアを美味しくお召し上がりたい',
-			userID: '1'
-		}
+	let inputIssue;
 
-	];
+	onMount(async () => {
+		$issues = getIssues();
+	});
 </script>
 
 <section class="text-gray-600 body-font">
@@ -71,8 +52,28 @@
   <div class="container px-5 py-24 mx-auto">
 	  <div class="m-auto text-center mb-8 lg:w-4/5">
 
-	  <input type="text" placeholder="どんな" class="input input-bordered input-primary w-full max-w-xs"> 時？
-	  <button class="btn btn-primary btn-circle">
+	  <input
+	  	type="text"
+		placeholder="どんな"
+		class="input input-bordered input-primary bg-white w-full max-w-xs mr-2"
+		bind:value={inputIssue}
+	  > 時？
+	  <button
+	  	class="btn btn-primary btn-circle"
+		on:click={() => {
+			if(inputIssue) {
+				console.log(inputIssue)
+				let tmp = $issues;;
+				tmp.push({
+					issueID: '999',
+					text: inputIssue,
+					userID: '999'
+				});
+				$issues = tmp;
+				console.log($issues);
+			}
+		}}
+	>
 		  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
 		</button>
 	</div>
@@ -80,20 +81,24 @@
     <div class="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
 
 
-	  {#each issues as item}
+	  {#each $issues as item}
 	  <div class="p-2 sm:w-1/2 w-full">
 		<div class="bg-gray-100 rounded flex p-4 h-full items-center">
 		  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-yellow-500 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
 			<path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
 			<path d="M22 4L12 14.01l-3-3"></path>
 		  </svg>
-		  <span class="title-font font-medium">
+		  <a class="title-font font-medium" href="/post?iid={item.issueID}">
 			  {item.text} 時
-		  </span>
+		  </a>
 		</div>
 	  </div>
 	  {/each}
 
     </div>
+
+	<div class="text-2xl text-center">
+		どうしますか？
+	</div>
   </div>
 </section>
