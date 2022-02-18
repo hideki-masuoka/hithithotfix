@@ -78,10 +78,8 @@ export const getSolutionList = () => {
 	};
 }
 
-export const getSolutionsFromIssueID = (issueID) => {
-	let allSolutions = getSolutions();
+export const getSolutionsFromIssueID = (issueID, allSolutions, solutionList) => {
 	let solutions = [];
-	let solutionList = getSolutionList();
 
 	if (solutionList[issueID] ?? false) {
 		allSolutions.forEach((item) => {
@@ -94,8 +92,7 @@ export const getSolutionsFromIssueID = (issueID) => {
 	return solutions;
 }
 
-export const getIssueFromID = (issueID) => {
-	let allIssues = getIssues();
+export const getIssueFromID = (issueID, allIssues) => {
 	let issue = {};
 
 	allIssues.forEach((item) => {
