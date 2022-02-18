@@ -31,7 +31,7 @@ export const getIssues = () => {
 			userID: '1'
 		}
 	];
-}
+};
 
 export const getSolutions = () => {
 	return [
@@ -61,22 +61,20 @@ export const getSolutions = () => {
 			userName: '砂の嵐',
 			userID: 'ID03',
 			userImage: 'https://api.lorem.space/image/face?hash=93040'
-		},
+		}
 	];
-}
+};
 
 export const getUsers = () => {
-	return [
-
-	];
-}
+	return [];
+};
 
 export const getSolutionList = () => {
 	return {
-		'1': ['1', '2'],
-		'2': ['3']
+		1: ['1', '2'],
+		2: ['3']
 	};
-}
+};
 
 export const getSolutionsFromIssueID = (issueID, allSolutions, solutionList) => {
 	let solutions = [];
@@ -90,7 +88,7 @@ export const getSolutionsFromIssueID = (issueID, allSolutions, solutionList) => 
 	}
 
 	return solutions;
-}
+};
 
 export const getIssueFromID = (issueID, allIssues) => {
 	let issue = {};
@@ -102,4 +100,4 @@ export const getIssueFromID = (issueID, allIssues) => {
 	});
 
 	return issue;
-}
+};
