@@ -1,5 +1,6 @@
 <script>
 	import '../app.postcss';
+	import { SvelteToast, toast } from '@zerodevx/svelte-toast'
 	import { pageID } from '$lib/store.js';
 
 	const TitleName = 'Hit Hit Hot-Fix';
@@ -18,6 +19,8 @@
 		rel="stylesheet"
 	/>
 </svelte:head>
+
+<SvelteToast />
 
 <header class="text-gray-600 body-font">
 	<div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
@@ -46,13 +49,36 @@
 			</span>
 		</button>
 		<nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-			<a class="mr-5 hover:text-gray-900">Features</a>
-			<a class="mr-5 hover:text-gray-900">Pricing</a>
-			<a class="mr-5 hover:text-gray-900">Contact</a>
-			<a class="mr-5 hover:text-gray-900">Login</a>
+			<a
+			  class="mr-5 hover:text-gray-900"
+			  on:click="{()=>{
+				  toast.push('人々の既知を超えて未踏の世界へ進んでください')
+			  }}"
+			>Features</a>
+			<a
+			  class="mr-5 hover:text-gray-900"
+			  on:click="{()=>{
+				  toast.push('お金、お金があれば続いていきます')
+			  }}"
+			>Pricing</a>
+			<a
+			  class="mr-5 hover:text-gray-900"
+			  on:click="{()=>{
+				  toast.push('ぼくです')
+			  }}"
+			>Contact</a>
+			<a
+			  class="mr-5 hover:text-gray-900"
+			  on:click="{()=>{
+				  toast.push('SNSアカウントで認証します')
+			  }}"
+			>Login</a>
 		</nav>
 		<button
 			class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"
+			on:click="{() =>{
+				toast.push('地球の裏側でもテレビは叩いて直すのかな？');
+			}}"
 		>
 			言語
 			<svg

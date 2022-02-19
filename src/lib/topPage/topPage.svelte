@@ -21,7 +21,7 @@
 </script>
 
 <section class="text-gray-600 body-font">
-	<div class="container px-5 py-24 mx-auto flex items-center md:flex-row flex-col lg:w-4/5">
+	<div class="container px-5 py-24 mx-auto flex items-center justify-evenly md:flex-row flex-col lg:w-4/5">
 		<div class="flex flex-col md:pr-10 md:mb-0 mb-6 pr-0 w-full md:w-auto md:text-left text-center">
 			<h1 class="md:text-3xl text-2xl font-medium title-font text-gray-900">
 				{PageTitle}
@@ -30,7 +30,7 @@
 				{PageSubTitle}
 			</h2>
 		</div>
-		<div class="flex md:ml-auto md:mr-0 mx-auto items-center flex-shrink-0 space-x-4">
+		<div class="flex items-center flex-shrink-0 space-x-4">
 			<input
 				type="text"
 				placeholder="どんな"

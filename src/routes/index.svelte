@@ -28,8 +28,8 @@
 	no-data
 {/if}
 
-<div class="alert shadow-lg justify-center">
-	<div>
+<div class="container m-auto">
+	<div class="m-auto alert shadow-lg justify-center">
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			class="stroke-current flex-shrink-0 h-6 w-6"
