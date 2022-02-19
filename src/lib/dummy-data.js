@@ -40,7 +40,7 @@ export const getSolutions = () => {
 			issueID: '1',
 			textA: '「プリントスクリーン」を検索',
 			textB: '画像ファイルを保存する方法が分かるように',
-			userName: 'name01',
+			userName: '大臣',
 			userID: 'ID01',
 			userImage: 'https://api.lorem.space/image/face?hash=92048'
 		},
@@ -49,7 +49,7 @@ export const getSolutions = () => {
 			issueID: '1',
 			textA: 'スマホで写真を取るように',
 			textB: 'スマホのアルバムに保存できるように',
-			userName: 'name02',
+			userName: '中臣鎌足',
 			userID: 'ID02',
 			userImage: 'https://api.lorem.space/image/face?hash=92040'
 		},
@@ -60,8 +60,18 @@ export const getSolutions = () => {
 			textB: '再びテレビが映るように',
 			userName: '砂の嵐',
 			userID: 'ID03',
+			userImage: 'https://pbs.twimg.com/profile_images/1494154533286469632/a_8hloQz_400x400.jpg'
+		},
+		{
+			solutionID: '4',
+			issueID: '5',
+			textA: '小さじ山盛り3杯をカップに入れ、温めた牛乳120mlを注ぎ、萌え萌えキュン！と一声掛けたり',
+			textB: '毎日おいしく召し上がる事ができるように',
+			userName: 'ヨハン・ワルター',
+			userID: 'ID04',
 			userImage: 'https://api.lorem.space/image/face?hash=93040'
 		}
+
 	];
 };
 
@@ -72,7 +82,8 @@ export const getUsers = () => {
 export const getSolutionList = () => {
 	return {
 		1: ['1', '2'],
-		2: ['3']
+		2: ['3'],
+		5: ['4']
 	};
 };
 
@@ -100,4 +111,49 @@ export const getIssueFromID = (issueID, allIssues) => {
 	});
 
 	return issue;
+};
+
+export const setRESTData = async (dataID,savedata) => {
+	const url = import.meta.env.VITE_REST_ROOT + 'setSaveData';
+	const params = {
+		dataid: dataID,
+		savedata: savedata
+	};
+
+	const form = new URLSearchParams();
+	form.append('dataset', JSON.stringify(params));
+
+	const res = await fetch(url, {
+		method: 'POST',
+		credentials: 'omit',
+		headers: {
+			'Content-Type': 'application/x-www-form-urlencoded',
+			Authorization: 'Basic ' + btoa(import.meta.env.VITE_REST_BASIC)
+		},
+		body: form
+	});
+
+	return await res.json();
+};
+
+export const getRESTData = async (dataID) => {
+	const url = import.meta.env.VITE_REST_ROOT + 'getSaveData';
+	const params = {
+		dataid: dataID
+	};
+
+	const form = new URLSearchParams();
+	form.append('dataset', JSON.stringify(params));
+
+	const res = await fetch(url, {
+		method: 'POST',
+		credentials: 'omit',
+		headers: {
+			'Content-Type': 'application/x-www-form-urlencoded',
+			Authorization: 'Basic ' + btoa(import.meta.env.VITE_REST_BASIC)
+		},
+		body: form
+	});
+
+	return await res.json();
 };
