@@ -1,6 +1,6 @@
 # Hit Hit Hot-Fix
 
-アプリケーション概要を書く
+既知を集めて未知を開放するアプリケーション
 
 [DEMO](https://hithithotfix.web.app)
 
@@ -30,4 +30,4 @@
 
 #### 最終日
 
-Soon
+DEKITA
