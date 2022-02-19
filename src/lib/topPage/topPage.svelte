@@ -1,7 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import { issues, pageID, currentIssueID } from '$lib/store.js';
-	import { getIssues } from '$lib/dummy-data.js';
+	import { getIssues, setRESTData } from '$lib/dummy-data.js';
 
 	const PageTitle = 'こんな時どうする？';
 	const PageSubTitle = '叩けば直るかな';
@@ -40,7 +40,7 @@
 			時？
 			<button
 				class="btn btn-secondary btn-circle btn-sm text-white"
-				on:click={() => {
+				on:click={async () => {
 					if (inputIssue) {
 						let tmp = $issues;
 						let data = {
@@ -50,6 +50,7 @@
 						};
 						tmp.push(data);
 						$issues = tmp;
+						await setRESTData(1, $issues);
 						$currentIssueID = data.issueID;
 						$pageID = '2';
 					}

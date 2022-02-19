@@ -112,3 +112,48 @@ export const getIssueFromID = (issueID, allIssues) => {
 
 	return issue;
 };
+
+export const setRESTData = async (dataID,savedata) => {
+	const url = import.meta.env.VITE_REST_ROOT + 'setSaveData';
+	const params = {
+		dataid: dataID,
+		savedata: savedata
+	};
+
+	const form = new URLSearchParams();
+	form.append('dataset', JSON.stringify(params));
+
+	const res = await fetch(url, {
+		method: 'POST',
+		credentials: 'omit',
+		headers: {
+			'Content-Type': 'application/x-www-form-urlencoded',
+			Authorization: 'Basic ' + btoa(import.meta.env.VITE_REST_BASIC)
+		},
+		body: form
+	});
+
+	return await res.json();
+};
+
+export const getRESTData = async (dataID) => {
+	const url = import.meta.env.VITE_REST_ROOT + 'getSaveData';
+	const params = {
+		dataid: dataID
+	};
+
+	const form = new URLSearchParams();
+	form.append('dataset', JSON.stringify(params));
+
+	const res = await fetch(url, {
+		method: 'POST',
+		credentials: 'omit',
+		headers: {
+			'Content-Type': 'application/x-www-form-urlencoded',
+			Authorization: 'Basic ' + btoa(import.meta.env.VITE_REST_BASIC)
+		},
+		body: form
+	});
+
+	return await res.json();
+};

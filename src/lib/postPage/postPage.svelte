@@ -1,7 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import { issues, solutions, solutionList, pageID, currentIssueID } from '$lib/store.js';
-	import { getIssueFromID, getSolutionsFromIssueID } from '$lib/dummy-data.js';
+	import { getIssueFromID, getSolutionsFromIssueID, setRESTData } from '$lib/dummy-data.js';
 
 	const PageTitle = 'パソコンの画面を画像ファイルにしたい';
 	const PageSubTitle = 'こんな時どうする？';
@@ -18,12 +18,13 @@
 		currentSolutions = getSolutionsFromIssueID($currentIssueID, $solutions, $solutionList);
 	};
 
-	const setSolutionList = (issueID, solutionID) => {
+	const setSolutionList = async (issueID, solutionID) => {
 		let data = $solutionList[issueID] ?? false;
 		if (data) {
 			data.push(solutionID);
 		} else {
 			$solutionList[issueID] = [solutionID];
+			await setRESTData(3, $solutionList);
 		}
 	};
 
@@ -119,7 +120,7 @@
 					<a
 						href="#"
 						class="btn btn-secondary"
-						on:click={() => {
+						on:click={async () => {
 							if(!inputTextA || !inputTextB) {
 								return;
 							}
@@ -135,6 +136,7 @@
 							inputTextA = null;
 							inputTextB = null;
 							$solutions.push(data);
+							await setRESTData(2, $solutions);
 							setSolutionList($currentIssueID, data.solutionID);
 							setCurrentSolutions();
 						}}
